@@ -16,6 +16,8 @@ private const val KEY_INDEX = "index"
 
 class MainActivity : AppCompatActivity() {
 
+    //onPause -> SIS -> onStop 순서로 호출됨
+    //ViewModel은 안드로이드 OS가 메모리에서 삭제하면 다 날라가지만, SIS는 일시적으로 계속 남아있음
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d(TAG,"onSaveInstanceState called")
