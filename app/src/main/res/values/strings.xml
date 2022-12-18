@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My KotlinApplication</string>
+    <string name="question_dgu">김태웅은 동국대 출신이다.</string>
+    <string name="question_age">김태웅은 1997년생이다.</string>
+    <string name="question_major">김태웅은 경영학을 전공했다.</string>
+    <string name="question_korean">김태웅은 한국인이다.</string>
+
+    <string name="true_button">TRUE</string>
+    <string name="false_button">FALSE</string>
+    <string name="next_button">NEXT</string>
+    <string name="prev_button">PREV</string>
+
+    <string name="correct_toast">정답!</string>
+    <string name="incorrect_toast">틀렸음</string>
+
+</resources>
