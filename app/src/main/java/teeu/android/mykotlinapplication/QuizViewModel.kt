@@ -18,11 +18,14 @@ class QuizViewModel : ViewModel() {
         Log.d(TAG,"ViewModel instance about to be destroyed")
     }
 
+    var isCheater = false
+    var cheatMessage = R.string.warning_text
+
     private val questionBank = listOf(
-        Question(R.string.question_age,false, false),
-        Question(R.string.question_dgu,true, false),
-        Question(R.string.question_korean,true, false),
-        Question(R.string.question_major,false, false),
+        Question(R.string.question_age,false, false, false),
+        Question(R.string.question_dgu,true, false, false),
+        Question(R.string.question_korean,true, false, false),
+        Question(R.string.question_major,false, false, false),
     )
     var currentIndex = 0
 
@@ -39,6 +42,12 @@ class QuizViewModel : ViewModel() {
     get() = questionBank[currentIndex].solved
     set(value) {
         questionBank[currentIndex].solved = value
+    }
+
+    var currentQuestionCheated : Boolean
+    get() = questionBank[currentIndex].cheat
+    set(value) {
+        questionBank[currentIndex].cheat = value
     }
 
     fun moveToNext() {
